@@ -1,0 +1,12 @@
+//A program to remove duplicates from an array
+
+function remDup(arr){  //takes array, returns array
+  for(var i=0; i<arr.length; i++) {
+    for (var j=i+1; j<arr.length; ) {
+      if (arr[i] == arr[j]) {
+        arr.splice(j,1);
+      } else {j++;}
+    }
+  }
+  return arr;
+}
