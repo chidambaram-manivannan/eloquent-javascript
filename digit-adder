@@ -1,0 +1,26 @@
+//A program to add the digits of a number
+function addTheDigits (number) {
+var string = number.toString();
+var result=0;
+for (var i=0; i<string.length; i++) {
+   result += Number(string[i]);
+  }
+return result;
+}
+
+console.log(addTheDigits(121));
+//-> 18
+
+//A program to add the digits of a number continuously till we arrive at a single digit
+function addTheDigits (number) {
+if (number <= 9) {return number;}
+var string = number.toString();
+var result=0;
+for (var i=0; i<string.length; i++) {
+   result += Number(string[i]);
+  }
+return addTheDigits(result);
+}
+
+console.log(addTheDigits(5697));
+//-> 9
